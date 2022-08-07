@@ -48,7 +48,7 @@ int main(void){
     char *m;
     while(true){
         printf("$");
-        m = inputString(stdin, 0);
+        m = standard_input(stdin, 0);
         if (strcmp(m, "/bin/ls") == 0)
         {
           _ls();
