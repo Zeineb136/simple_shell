@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <unistd.h>
-#include <dirent.h>
+#include "shell.h"
 
 char *standard_input(FILE* fp, size_t size)
 {
