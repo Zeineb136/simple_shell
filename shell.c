@@ -43,23 +43,3 @@ void _ls()
 	}
 	printf("\n");
 }
-
-int main(void){
-    char *m;
-    while(true){
-        printf("$");
-        m = standard_input(stdin, 0);
-        if (strcmp(m, "/bin/ls") == 0)
-        {
-          _ls();
-        }
-        else /* default: */
-        {
-            printf("./shell: No such file or directory\n");
-        }
-
-        free(m);
-    }
-
-    return 0;
-}
