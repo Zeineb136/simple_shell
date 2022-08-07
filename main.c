@@ -7,7 +7,24 @@
  *
  */
 
-typedef struct {
-	File *input;
-	File *output;
+
+int main(void)
+{
+    char *m;
+    while(true){
+        printf("$");
+        m = standard_input(stdin, 0);
+        if (strcmp(m, "/bin/ls") == 0)
+        {
+          _ls();
+        }
+        else 
+        {
+            printf("./shell: No such file or directory\n");
+        }
+
+        free(m);
+    }
+
+    return 0;
 }
