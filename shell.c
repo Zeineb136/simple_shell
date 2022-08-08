@@ -31,6 +31,11 @@ void _ls()
 		if (d->d_name[0] == '.')
 			continue;
 		printf("%s  ", d->d_name);
+		else
+		{
+			printf("Error! Unable to open directory.\n");
+			exit(0);
+		}		
 	}
 	printf("\n");
 }
