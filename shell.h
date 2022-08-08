@@ -7,6 +7,7 @@
 #include <stdbool.h>
 #include <dirent.h>
 
+
 char *standard_input(FILE* fp, size_t size);
 void _ls();
 char *read_standard_input(void);

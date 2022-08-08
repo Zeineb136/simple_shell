@@ -2,11 +2,10 @@
 
 char *standard_input(FILE* fp, size_t size)
 {
-//The size is extended by the with the value of the provisional
     char *str;
     int ch;
     size_t len = 0;
-    str = realloc(NULL, sizeof(*str)*size);//size is start size
+    str = realloc(NULL, sizeof(*str)*size);
     if(!str)return str;
     while(EOF!=(ch=fgetc(fp)) && ch != '\n'){
         str[len++]=ch;
@@ -27,10 +26,8 @@ void _ls()
 
 	struct dirent *d;
 	DIR *dh = opendir(dir);
-	//While the next entry is not readable we will print directory files
 	while ((d = readdir(dh)) != NULL)
 	{
-		//If hidden files are found we continue
 		if (d->d_name[0] == '.')
 			continue;
 		printf("%s  ", d->d_name);
