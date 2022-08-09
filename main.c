@@ -14,6 +14,10 @@ int main(void)
     while(true){
         printf("$");
         m = standard_input(stdin, 0);
+	if (strcmp(m, "exit") == 0) 
+	{
+		exit(EXIT_FAILURE);
+	}
         if (strcmp(m, "/bin/ls") == 0)
         {
           _ls();

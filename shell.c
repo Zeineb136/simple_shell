@@ -1,10 +1,12 @@
 #include "shell.h"
+#define EXITCMD "exit"
 
 char *standard_input(FILE* fp, size_t size)
 {
     char *str;
     int ch;
     size_t len = 0;
+      
     str = realloc(NULL, sizeof(*str)*size);
     if(!str)return str;
     while(EOF!=(ch=fgetc(fp)) && ch != '\n'){
@@ -26,16 +28,14 @@ void _ls()
 
 	struct dirent *d;
 	DIR *dh = opendir(dir);
+
 	while ((d = readdir(dh)) != NULL)
 	{
 		if (d->d_name[0] == '.')
 			continue;
-		printf("%s  ", d->d_name);
-		else
-		{
-			printf("Error! Unable to open directory.\n");
-			exit(0);
-		}		
+		printf("%s  ", d->d_name);		
 	}
 	printf("\n");
 }
+
+
