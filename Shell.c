@@ -2,7 +2,7 @@
 /**
  *standard_input - read command line
  *@fp: input string
- *@size: size of input
+ *@size: size of input string
  *
  *Return: nothing
  */
