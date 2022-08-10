@@ -1,7 +1,7 @@
 #include "shell.h"
-#include <string.h>
+
 /**
- * main -check the code
+ * main- check the code
  *
  * Return: Always 0.
  */
