@@ -8,8 +8,8 @@
 #include <dirent.h>
 #include <string.h>
 
-char *standard_input(FILE* fp, size_t size);
-void _ls();
+char *standard_input(FILE *fp, size_t size);
+void _ls(void);
 char *read_standard_input(void);
 void shell_loop(void);
 #endif

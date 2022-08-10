@@ -1,5 +1,11 @@
 #include "shell.h"
-#define EXITCMD "exit"
+/**
+ *standard_input - read command line
+ *@fp: input string
+ *@size: size of input
+ *
+ * Return: nothing
+ */
 
 char *standard_input(FILE* fp, size_t size)
 {
