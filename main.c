@@ -7,12 +7,14 @@
  */
 
 
-int main(void)
+int main(int argc, char *argv[])
 {
 char *m;
 bool is_end;
+(void)argc;
 while (true)
 {
+	printf("$");
 	m = standard_input(stdin, 0, &is_end);
 if (strcmp(m, "/bin/ls") == 0)
 {
@@ -29,9 +31,8 @@ if (strcmp(m, "exit") == 0 || is_end)
 }    
 else
 {
-printf("./shell: No such file or directory\n");
+printf("%s: No such file or directory\n", argv[0]);
 }
-printf("$");
 free(m);
 }
 
