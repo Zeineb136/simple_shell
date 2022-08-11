@@ -3,10 +3,10 @@
  *standard_input - read command line
  *@fp: input string
  *@size: size of input string
- *
+ *@is_end: end of file
  *Return: nothing
  */
-char *standard_input(FILE *fp, size_t size, bool* is_end)
+char *standard_input(FILE *fp, size_t size, bool *is_end)
 {
 	char *str;
 	int ch;
@@ -16,7 +16,7 @@ char *standard_input(FILE *fp, size_t size, bool* is_end)
 	if (!str)
 		return (str);
 	ch = fgetc(fp);
-	while (EOF != ch && ch != '\n')
+	while (ch != EOF && ch != '\n')
 	{
 		str[len++] = ch;
 		ch = fgetc(fp);

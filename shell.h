@@ -8,7 +8,7 @@
 #include <dirent.h>
 #include <string.h>
 
-char *standard_input(FILE *fp, size_t size, bool* is_end);
+char *standard_input(FILE *fp, size_t size, bool *is_end);
 void _ls(void);
 
 #endif

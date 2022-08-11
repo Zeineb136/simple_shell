@@ -2,7 +2,8 @@
 
 /**
  * main- check the code
- *
+ *@argc: argument counter
+ *@argv: argument vector
  * Return: Always 0.
  */
 
@@ -21,17 +22,14 @@ if (strcmp(m, "/bin/ls") == 0)
 	_ls();
 }
 else
-if (strcmp(m, "exit") == 0 || is_end)                                                                                                                                     
-
-{                                                                                                                                                                         
-
-	                free(m);                                                                                                                                                  
-
-			                exit(EXIT_FAILURE);                                                                                                                                  
-}    
+if (strcmp(m, "exit") == 0 || is_end)
+{
+	free(m);
+	exit(EXIT_FAILURE);
+}
 else
 {
-printf("%s: No such file or directory\n", argv[0]);
+	printf("%s: No such file or directory\n", argv[0]);
 }
 free(m);
 }
