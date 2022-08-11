@@ -13,7 +13,6 @@ char *m;
 bool is_end;
 while (true)
 {
-	printf("$");
 	m = standard_input(stdin, 0, &is_end);
 if (strcmp(m, "/bin/ls") == 0)
 {
@@ -32,6 +31,7 @@ else
 {
 printf("./shell: No such file or directory\n");
 }
+printf("$");
 free(m);
 }
 
