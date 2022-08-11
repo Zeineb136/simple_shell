@@ -10,18 +10,24 @@
 int main(void)
 {
 char *m;
+bool is_end;
 while (true)
 {
 	printf("$");
-	m = standard_input(stdin, 0);
-if (strcmp(m, "exit") == 0)
-{
-	exit(EXIT_FAILURE);
-}
+	m = standard_input(stdin, 0, &is_end);
 if (strcmp(m, "/bin/ls") == 0)
 {
 	_ls();
 }
+else
+if (strcmp(m, "exit") == 0 || is_end)                                                                                                                                     
+
+{                                                                                                                                                                         
+
+	                free(m);                                                                                                                                                  
+
+			                exit(EXIT_FAILURE);                                                                                                                                  
+}    
 else
 {
 printf("./shell: No such file or directory\n");

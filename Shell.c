@@ -6,7 +6,7 @@
  *
  *Return: nothing
  */
-char *standard_input(FILE *fp, size_t size)
+char *standard_input(FILE *fp, size_t size, bool* is_end)
 {
 	char *str;
 	int ch;
@@ -16,11 +16,6 @@ char *standard_input(FILE *fp, size_t size)
 	if (!str)
 		return (str);
 	ch = fgetc(fp);
-	if (ch == EOF){
-		str = realloc(str, sizeof(*str) * 5);
-		strcpy(str, "exit");
-		return (str);
-	}
 	while (EOF != ch && ch != '\n')
 	{
 		str[len++] = ch;
@@ -32,6 +27,10 @@ char *standard_input(FILE *fp, size_t size)
 			return (str);
 	}
 	}
+	if (ch == EOF)
+		*is_end = true;
+	else
+		*is_end = false;
 	str[len++] = '\0';
 	return (realloc(str, sizeof(*str) * len));
 }
