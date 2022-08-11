@@ -16,7 +16,7 @@ while (true)
 	printf("$");
 	m = standard_input(stdin, 0);
 
-if (strcmp(m, "exit") == 0)
+if (strcmp(m, "exit") == 0 || strcmp(m, "") == 0)
 {
 	exit(EXIT_FAILURE);
 }
