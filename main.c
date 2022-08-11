@@ -14,9 +14,10 @@ char *m;
 while (true)
 {
 	printf("$");
-	m = standard_input(stdin, 0);
+	m = standard_input(stdin, 16);
+	printf("%s\n", m);
 
-if (strcmp(m, "exit") == 0 || strcmp(m, "") == 0)
+if (strcmp(m, "exit") == 0)
 {
 	exit(EXIT_FAILURE);
 }
