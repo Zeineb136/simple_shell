@@ -15,9 +15,16 @@ char *standard_input(FILE *fp, size_t size)
 	str = realloc(NULL, sizeof(*str) * size);
 	if (!str)
 		return (str);
-	while (EOF != (ch = fgetc(fp)) && ch != '\n')
+	ch = fgetc(fp);
+	if (ch == EOF){
+		str = realloc(str, sizeof(*str) * 5);
+		strcpy(str, "exit");
+		return (str);
+	}
+	while (EOF != ch && ch != '\n')
 	{
 		str[len++] = ch;
+		ch = fgetc(fp);
 	if (len == size)
 	{
 		str = realloc(str, sizeof(*str) * (size += 16));

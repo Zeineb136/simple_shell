@@ -10,13 +10,10 @@
 int main(void)
 {
 char *m;
-
 while (true)
 {
 	printf("$");
-	m = standard_input(stdin, 16);
-	printf("%s\n", m);
-
+	m = standard_input(stdin, 0);
 if (strcmp(m, "exit") == 0)
 {
 	exit(EXIT_FAILURE);
