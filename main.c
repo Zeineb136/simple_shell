@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * main- check the code
  *@argc: argument counter
@@ -13,6 +12,7 @@ int main(int argc, char *argv[])
 char *m;
 bool is_end;
 (void)argc;
+
 while (true)
 {
 	printf("$");
